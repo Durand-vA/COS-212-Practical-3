@@ -18,7 +18,6 @@ public class Node implements Comparable<Node> {
         input = input.substring(input.indexOf('{'));
 
         StringBuilder leftInput = new StringBuilder();
-        StringBuilder rightInput = new StringBuilder();
 
         int openBraces = 0;
 
@@ -36,35 +35,20 @@ public class Node implements Comparable<Node> {
             }
         } while (openBraces > 0);
 
-        do {
-            int openIndex = input.indexOf('{');
-            int closedIndex = input.indexOf('}');
-            if (openIndex >= 0 && openIndex < closedIndex) {
-                rightInput.append(input, 0, openIndex+1);
-                input = input.substring(openIndex+1);
-                openBraces++;
-            } else {
-                rightInput.append(input, 0, closedIndex+1);
-                input = input.substring(closedIndex+1);
-                openBraces--;
-            }
-        } while (openBraces > 0);
-
         data = data.substring(2, data.indexOf('%'));
 
         String[] splitData = data.split(":");
 
         studentNumber = Integer.parseInt(splitData[0]);
 
-//        splitData[1] = splitData[1].substring(0, splitData[1].length()-1);
         mark = splitData[1].equals("null") ? null : Integer.parseInt(splitData[1]);
 
         if (leftInput.length() != 2) {
             left = new Node(leftInput.toString());
         }
 
-        if (rightInput.length() != 2) {
-            right = new Node(rightInput.toString());
+        if (input.length() != 2) {
+            right = new Node(input);
         }
 
     }

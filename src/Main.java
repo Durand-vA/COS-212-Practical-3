@@ -205,6 +205,8 @@ public class Main {
 
         start_suite("Sort by Student number");
 
+        assertEquals(emptyTree2.sortByStudentNumber(), "Empty Tree");
+
         assertEquals(tree1.sortByStudentNumber(), "[u234:20%][u235:null%][u236:5%][u237:10%]");
 
         tree2Copy = new SplayTree(tree2.toStringOneLine());
@@ -229,6 +231,8 @@ public class Main {
 
 
         start_suite("Sort by student mark");
+
+        assertEquals(emptyTree2.sortByMark(), "Empty Tree");
 
         assertEquals(tree1.sortByMark(), "[u235:null%][u236:5%][u237:10%][u234:20%]");
 

@@ -281,6 +281,9 @@ public class SplayTree {
     }
 
     public String sortByStudentNumber() {
+        if (root == null) {
+            return "Empty Tree";
+        }
         return sortByStudentNumber(new StringBuilder(), root).toString();
     }
 

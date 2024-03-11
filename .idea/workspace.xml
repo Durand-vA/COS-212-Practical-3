@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a06227-5654-486d-b06c-18958d98ffc3" name="Changes" comment="Finished bulk of code, just need to test">
+    <list default="true" id="11a06227-5654-486d-b06c-18958d98ffc3" name="Changes" comment="Testing pretty much at 100%, just some redundant null checks not worth checking. First submission">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SplayTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SplayTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +33,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "Application.Testing Main.executor": "Coverage",
+    "Application.Testing Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -75,7 +76,7 @@
       <workItem from="1710138838246" duration="14478000" />
       <workItem from="1710156176470" duration="4188000" />
       <workItem from="1710166725369" duration="26000" />
-      <workItem from="1710166761216" duration="5323000" />
+      <workItem from="1710166761216" duration="6768000" />
     </task>
     <task id="LOCAL-00001" summary="Finished bulk of code, just need to test">
       <option name="closed" value="true" />
@@ -85,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710161794123</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Testing pretty much at 100%, just some redundant null checks not worth checking. First submission">
+      <option name="closed" value="true" />
+      <created>1710172388055</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710172388055</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,7 +102,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished bulk of code, just need to test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished bulk of code, just need to test" />
+    <MESSAGE value="Testing pretty much at 100%, just some redundant null checks not worth checking. First submission" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing pretty much at 100%, just some redundant null checks not worth checking. First submission" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -106,6 +116,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/COS212_Practical_3$Testing_Main.ic" NAME="Testing Main Coverage Results" MODIFIED="1710172256677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/COS212_Practical_3$Testing_Main.ic" NAME="Testing Main Coverage Results" MODIFIED="1710179987405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
