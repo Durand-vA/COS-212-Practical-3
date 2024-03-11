@@ -121,36 +121,26 @@ public class SplayTree {
             return null;
         }
 
-        // Data smaller than this node, look to the left
+        // look to the left
         if (data.compareTo(current) < 0) {
-            // Probably unnecessary null check
-            if (current.left == null) {
-                return null;
-            } else {
-                // check if left child has correct data
-                if (current.left.compareTo(data) == 0) {
-                    // Return this node when data is found
-                    return current;
-                }
-                // Continue binary search on the left
-                return getParent(data, current.left);
+            // check left child
+            if (current.left.compareTo(data) == 0) {
+                return current;
             }
+            // Continue search to the left
+            return getParent(data, current.left);
+
         }
 
-        // Data greater than this node, look to the right
+        // look to the right
         if (data.compareTo(current) > 0) {
-            // Probably unnecessary null check
-            if (current.right == null) {
-                return null;
-            } else {
-                // Check if right child has correct data
-                if (current.right.compareTo(data) == 0) {
-                    // Return this node when data is found
-                    return current;
-                }
-                // Continue binary search on the right
-                return getParent(data, current.right);
+            // Check right child
+            if (current.right.compareTo(data) == 0) {
+                // Return this node when data is found
+                return current;
             }
+            // Continue search to the right
+            return getParent(data, current.right);
         }
 
         return null;
@@ -263,6 +253,8 @@ public class SplayTree {
 
         if (element.left == null) {
             root = rightTree;
+        } else if (element.right == null) {
+            root = element.left;
         } else {
             root = element.left;
 
@@ -314,7 +306,7 @@ public class SplayTree {
 
     private int populate(Node[] nodes, Node node, int i) {
         if (node == null) {
-            return i-1;
+            return i - 1;
         }
         nodes[i] = node;
         i = populate(nodes, node.left, i + 1);
