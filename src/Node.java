@@ -59,7 +59,7 @@ public class Node implements Comparable<Node> {
 
     @Override
     public int compareTo(Node o) {
-        return ((Integer) studentNumber).compareTo((Integer) o.studentNumber);
+        return Integer.compare(studentNumber, o.studentNumber);
     }
 
     public int compareToMark(Node o) {

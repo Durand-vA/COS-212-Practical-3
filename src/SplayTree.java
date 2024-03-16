@@ -52,11 +52,8 @@ public class SplayTree {
     }
 
     public Node access(int studentNumber, Integer mark) {
-        Node node = search(studentNumber);
+        Node node = insert(studentNumber, mark);
 
-        if (node == null) {
-            node = insert(studentNumber, mark);
-        }
         splay(node);
         if (mark != null) {
             node.mark = mark;
@@ -205,8 +202,8 @@ public class SplayTree {
     }
 
     private Node insert(int studentNum, Integer mark, Node node) {
-        if (node == null) {
-            return null;
+        if (node == null || node.studentNumber == studentNum) {
+            return node;
         }
 
         if (studentNum < node.studentNumber) {
@@ -221,24 +218,6 @@ public class SplayTree {
             return node.right;
         }
         return insert(studentNum, mark, node.right);
-    }
-
-    private Node search(int studentNumber) {
-        return search(studentNumber, root);
-    }
-
-    private Node search(int studentNumber, Node node) {
-        if (node == null) {
-            return null;
-        }
-
-        if (studentNumber < node.studentNumber) {
-            return search(studentNumber, node.left);
-        }
-        if (studentNumber > node.studentNumber) {
-            return search(studentNumber, node.right);
-        }
-        return node;
     }
 
     public Node remove(int studentNumber) {
